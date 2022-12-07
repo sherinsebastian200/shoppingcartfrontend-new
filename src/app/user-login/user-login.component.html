@@ -1,31 +1,45 @@
+<div class="bg-image" style="background-image: url('https://img.freepik.com/free-vector/blue-pink-halftone-background_53876-99004.jpg?w=2000'); height: 100vh; width: 100vw;">   
+<div class="container">
+     <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
-<div class="bg-image" style="background-image: url('https://i.pinimg.com/originals/54/c6/5b/54c65b442b8714f472f64af55007426b.jpg'); height: 100vh; width: 100vw;">   
+            <div class="row g-3 mt-4">
 
-    <div class="container">
-        <div class="row">
-            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                <div class="row g-3 mt-4">
-                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                        <h1 class="text-dark">User Login</h1>
-                    </div>
-                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                      <label for="" class="form-label">Email</label>
-                        <input name="email" [(ngModel)]="email" type="text" class="form-control">
-                    </div>
-                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                        <label for="" class="form-label">Password</label>
-                        <input name="password" [(ngModel)]="password" type="password"  id="" class="form-control">
-                    </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <h2 class="text" style="text-align:center">User Login</h2>
+
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <label for="" class="form-label">Email Id</label>
+                    <input type="email" name="email" [(ngModel)]="email" id="" class="form-control">
                    
-                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                        <button class="btn btn-success" (click)="readValues()">Login</button>
-                    </div>
-                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                        <a href="/userregistration"><h4>Click here for User Signup</h4></a>
-                    </div>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <label for="" class="form-label ">Password</label>
+                    <input  name="password" [(ngModel)]="password"   type="password" name="" id="" class="form-control">
+
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                   <button (click)="readValues()"  class="btn btn-primary">Login</button>
+
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <a routerLink="/userregistration" >User SignUp</a>
+
                    
-                   </div>
+
+                </div>
+
+                
+                
             </div>
+
         </div>
     </div>
 </div>
+

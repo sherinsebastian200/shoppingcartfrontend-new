@@ -1,10 +1,15 @@
-<div class="bg-image" style="background-image: url('https://img.freepik.com/free-vector/vibrant-summer-ombre-background-vector_53876-105765.jpg?w=2000'); height: 100vh; width: 100vw;">   
+<div class="bg-image" style="background-image: url('https://img.freepik.com/free-vector/watercolor-background_87374-69.jpg?w=1060&t=st=1670435779~exp=1670436379~hmac=1ec9effe14b1d5bf4ebe5d22362a10fd629278229088ab60b0bd78d8e579a852'); height: 100vh; width: 100vw;">   
 
 <div class="container">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-3 mt-4">
-               <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <h2 class="text" style="text-align:center">User Registeration</h2>
+                </div>
+
+               <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Name</label>
                     <input name="name" [(ngModel)]="name" type="text" class="form-control">
                 </div>
@@ -35,7 +40,12 @@
                     <button (click)="readValues()" class="btn btn-success">Register</button>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <a href="/userlogin"><h4>Click here for user login</h4></a>
+                    <a routerLink="/userlogin" >Click here for user login</a>
+                    
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <a routerLink="/">Back to Admin Login</a>
+                    
                 </div>
             </div>
         </div>

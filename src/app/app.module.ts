@@ -12,6 +12,7 @@ import { SearchProductsComponent } from './search-products/search-products.compo
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { SearchLoginComponent } from './search-login/search-login.component';
 const myRoute:Routes=[
   {
     path:"",
@@ -48,13 +49,15 @@ const myRoute:Routes=[
     AddProductsComponent,
     ViewProductsComponent,
     SearchProductsComponent,
-    NavBarComponent
+    NavBarComponent,
+    SearchLoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     RouterModule.forRoot(myRoute),
-    FormsModule
+
     
   ],
   providers: [],
