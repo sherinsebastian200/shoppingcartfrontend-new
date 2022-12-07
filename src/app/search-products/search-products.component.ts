@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-search-products',
@@ -7,13 +8,32 @@ import { Component } from '@angular/core';
 })
 export class SearchProductsComponent {
 
+  constructor(private api:ApiService){}
   productname=""
+  searchProducts:any=[]
   readValues=()=>
   {
-    let data:any= {"productname":this.productname}
-  console.log(data)
+    let data:any={"productname":this.productname}
+    console.log(data)
+    this.api.searchProducts(data).subscribe(
+      (response:any)=>
+      {
+        console.log(response)
+        if(response.length==0){
+          alert("Invalid Product name")
+          this.productname=""
+        }
+        else{
+          this.searchProducts=response;
+
+        }
+        
+          
+      }
+    )
   
-    }
+  
+  }
   
 
 }
