@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-login',
@@ -7,11 +8,16 @@ import { Component } from '@angular/core';
 })
 export class UserLoginComponent {
   email=""
-  password=""
-  readValues=()=>
-  {
-    let data:any={"email":this.email,"password":this.password}
-    console.log(data)
-
+password=""
+constructor(private router:Router){}
+readValues=()=>
+{
+  let data:any={"email":this.email,"password":this.password}
+  console.log(data)
+  if (this.email=="user@123" && this.password=="1122") {
+    this.router.navigate(['/searchlog'])
+  } else {
+    alert("wrong details")
+  }
 }
 }

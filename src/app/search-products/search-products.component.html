@@ -1,12 +1,56 @@
 <app-nav-bar></app-nav-bar>
 <div class="container">
-    <div class="row g-3 mt-4">
-        <div class="col col-12 col sm-12 col md-12 col lg-12 col xl-12 col-xxl-12">
-            <label for="" class="form-label">ProductName</label>
-            <input name="productname" [(ngModel)]="productname" type="text" class="form-control">
+    <div class="row m-4">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="card">
+                <img height="700PX" src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_663974538_353364.jpg" class="card-img-top" alt="...">
+                
+              </div>
+
         </div>
-        <div class="col col-12 col sm-12 col md-12 col lg-12 col xl-12 col-xxl-12 text-center">
-            <button (click)="readValues()" class="btn btn-primary">Search</button>
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3 m-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <label for="" class="form-label">Product Name</label>
+                    <input type="text" name="productname" [(ngModel)]="productname" class="form-control">
+
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    
+                    <button (click)="readValues()" class="btn btn-success">Search</button>
+                </div>
+            </div>
+
+            <div class="row m-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <table class="table table-bordered border-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">Product Name</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Image</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let i of searchProducts">
+                                <td>{{i.productname}}</td>
+                                <td>{{i.category}}</td>
+                                <td>{{i.description}}</td>
+                                <td>{{i.price}}</td>
+                                <td>{{i.image}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
         </div>
-    <div>
-</div>
+    </div>
+</div>     
