@@ -13,6 +13,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { SearchLoginComponent } from './search-login/search-login.component';
+import { NavUserComponent } from './nav-user/nav-user.component';
+import { HttpClientModule } from '@angular/common/http';
 const myRoute:Routes=[
   {
     path:"",
@@ -37,6 +39,10 @@ const myRoute:Routes=[
   {
     path:"userlogin",
     component:UserLoginComponent
+  },
+  {
+    path:"searchlog",
+    component:SearchLoginComponent
   }
 ]
 
@@ -50,13 +56,15 @@ const myRoute:Routes=[
     ViewProductsComponent,
     SearchProductsComponent,
     NavBarComponent,
-    SearchLoginComponent
+    SearchLoginComponent,
+    NavUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot(myRoute),
+    HttpClientModule
 
     
   ],
