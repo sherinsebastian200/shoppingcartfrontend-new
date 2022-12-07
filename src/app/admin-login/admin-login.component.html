@@ -1,0 +1,32 @@
+<app-nav-bar></app-nav-bar>
+<div class="bg-image" style="background-image: url('https://previews.123rf.com/images/alenast/alenast1508/alenast150800011/43584702-vector-colorful-background-with-triangles-dots-with-connection-for-your-business-presentstion-slides.jpg'); height: 100vh; width: 100vw;">   
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <h1 class="text-dark">Admin Login</h1>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                  <label for="" class="form-label">User Name</label>
+                    <input name="username" [(ngModel)]="username" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Password</label>
+                    <input name="password" [(ngModel)]="password" type="password"  id="" class="form-control">
+                </div>
+               
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button class="btn btn-primary" (click)="readValues()">Login</button>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <a href="/usersignup"><h4>Click here for User Signup</h4></a>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <a href="/userregistration"><h4>Click here for User Registration</h4></a>
+                </div>
+               </div>
+        </div>
+    </div>
+</div>
