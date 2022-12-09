@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-search-login',
@@ -6,12 +7,34 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-login.component.css']
 })
 export class SearchLoginComponent {
-  productname=""
-
-  readValues=()=>
-  {
-    let data:any={"productname":this.productname}
-    console.log(data)
+  constructor(private api:ApiService){
+    api.fetchProducts().subscribe(
+      (response:any)=>
+      {
+        this.data=response
+      }
+    )
   }
-  data:any=[]
-  }
+productname=""
+searchData:any=[]
+readValues=()=>
+{
+  let data:any={"productname":this.productname}
+  console.log(data)
+  this.api.searchProducts(data).subscribe(
+    (response:any)=>
+    {
+      console.log(response)
+      if(response.length==0)
+      {
+        alert("invalid product name")
+      }
+      else{
+        this.data=[];
+        this.searchData=response
+      }
+    }
+  )
+}
+data:any=[]
+}
