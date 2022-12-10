@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { SearchLoginComponent } from './search-login/search-login.component';
 import { NavUserComponent } from './nav-user/nav-user.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
 const myRoute:Routes=[
   {
     path:"",
@@ -43,6 +44,10 @@ const myRoute:Routes=[
   {
     path:"searchlog",
     component:SearchLoginComponent
+  },
+  {
+    path:"viewprofile",
+    component:ViewProfileComponent
   }
 ]
 
@@ -57,7 +62,8 @@ const myRoute:Routes=[
     SearchProductsComponent,
     NavBarComponent,
     SearchLoginComponent,
-    NavUserComponent
+    NavUserComponent,
+    ViewProfileComponent
   ],
   imports: [
     BrowserModule,
