@@ -13,25 +13,29 @@ export class UserLoginComponent {
   searchUser:any=[]
   
   constructor(private api:ApiService,private router:Router){}
-  readValues = () => {
-    let data: any = {
-      "email": this.email,
-      "password": this.password
-    }
-
-    this.api.LoginUser(data).subscribe(
-      (response: any) => {
-        this.email = ""
-        this.password = ""
-        if (response.status == "success") {
-          let userId = response.userId
+  readValues=()=>
+  {
+    let data:any={"email":this.email,"password":this.password}
+    console.log(data)
+    this.api.AddLogin(data).subscribe(
+      (response:any)=>
+      {
+        console.log(response)
+        if (response.length==0) {
+          alert("invalid email or password")
+          this.email=""
+          this.password=""
+        } else {
+          this.searchUser=response; 
+          let userId=response.userId
           console.log(userId)
           localStorage.setItem("userInfo",userId)
-          this.router.navigate(["/viewUserProduct"])
-        } else {
-          alert(response.message)
+          this.router.navigate(['/searchlog'])
         }
+       
+       
       }
     )
+    
   }
-}
+  }

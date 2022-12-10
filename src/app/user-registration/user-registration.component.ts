@@ -20,7 +20,7 @@ export class UserRegistrationComponent {
     let data:any= {"name":this.name,"address":this.address,"mobno":this.mobno,"email":this.email,"password":this.password,"confirmpassword":this.confirmpassword}
   console.log(data)
   
-  this.api.addUser(data).subscribe(
+  this.api.AddUser(data).subscribe(
     (response:any)=>
     {
       console.log(response)

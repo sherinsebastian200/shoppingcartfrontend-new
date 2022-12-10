@@ -21,8 +21,7 @@ export class AdminLoginComponent {
       this.router.navigate(['/add'])
     }
     else{
-      this.password=""
-      this.username=""
+     
       alert("Invalid Credentials")
     }
   }

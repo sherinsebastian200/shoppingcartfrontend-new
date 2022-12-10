@@ -10,16 +10,17 @@ export class AddProductsComponent {
   productname=""
   image=""
   category=""
-  description=""
   price=""
+  description=""
+ 
 
   constructor(private api:ApiService){}
   readValues=()=>
   
   {
-    let data:any= {"productname":this.productname,"image":this.image,"category":this.category,"description":this.description,"price":this.price}
+    let data:any= {"productname":this.productname,"image":this.image,"category":this.category,"price":this.price,"description":this.description}
   console.log(data)
-  this.api.addProducts(data).subscribe(
+  this.api.AddProducts(data).subscribe(
     (response:any)=>
     {
       console.log(response)
@@ -27,9 +28,10 @@ export class AddProductsComponent {
         alert("Product added successfully")
         this.productname=""
         this.image=""
-        this.description=""
+       
         this.category=""
         this.price=""
+        this.description=""
       
         
       } else {

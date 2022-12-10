@@ -15,7 +15,7 @@ export class SearchProductsComponent {
   {
     let data:any={"productname":this.productname}
     console.log(data)
-    this.api.searchProducts(data).subscribe(
+    this.api.SearchProducts(data).subscribe(
       (response:any)=>
       {
         console.log(response)

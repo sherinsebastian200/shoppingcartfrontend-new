@@ -5,25 +5,32 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ApiService {
+  
 
   constructor(private http:HttpClient) { }
-  addProducts=(dataToSend:any)=>
+  AddProducts=(dataToSend:any)=>
   {
     return this.http.post("http://localhost:8080/add",dataToSend)
   }
-  fetchProducts=()=>
+  FetchProducts=()=>
   {
     return this.http.get("http://localhost:8080/view")
   }
-  searchProducts=(dataToSend:any)=>
+  SearchProducts=(dataToSend:any)=>
   {
     return this.http.post("http://localhost:8080/search",dataToSend)
   }
-  addUser=(dataToSend:any)=>
+  AddUser=(dataToSend:any)=>
   {
     return this.http.post("http://localhost:8080/userregistration",dataToSend)
   }
-  LoginUser = (dataToSend:any)=>{
-    return this.http.post("http://localhost:8080/userlogin", dataToSend)
+  
+  AddLogin=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/login",dataToSend)
+  }
+  getProfileDetails=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/viewprofile",dataToSend)
   }
 }
